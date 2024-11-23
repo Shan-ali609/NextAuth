@@ -1,6 +1,8 @@
 import React from 'react'
 
-export default function page({params}: any) {
+
+
+export default function page({params}:any) {
   return (
     <div className='flex flex-col items-center justify-center w-full h-screen'>
       <h1 className='text-3xl font-bold'>profile page</h1>
@@ -10,3 +12,4 @@ export default function page({params}: any) {
     </div>
   )
 }
+

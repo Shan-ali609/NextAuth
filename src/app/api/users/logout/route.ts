@@ -1,11 +1,11 @@
 
 import { connect } from "@/dbconnection/dbconfig";
-import { NextRequest, NextResponse } from "next/server";
+import {  NextResponse } from "next/server";
 
 connect();
 
 
-export async function GET(request: NextRequest) {
+export async function GET() {
     try {
         const response = NextResponse.json({
             message:" successfully logout",
@@ -17,8 +17,8 @@ export async function GET(request: NextRequest) {
         });
 
         return response
-    } catch (error:any) {
-        NextResponse.json({error: error.message}, {status: 400})
+    } catch (error) {
+        NextResponse.json("error:"+ error, {status: 400})
     }
 }
 
